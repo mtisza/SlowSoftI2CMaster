@@ -1,4 +1,4 @@
-/* Arduino Slow Software I2C Master 
+/* Arduino Slow Software I2C Master
    Copyright (c) 2017 Bernhard Nebel.
 
    This library is free software; you can redistribute it and/or
@@ -25,7 +25,7 @@
 #define I2C_READ 1
 #define I2C_WRITE 0
 #define DELAY 4 // usec delay
-#define BUFFER_LENGTH 32
+#define BUFFER_LENGTH 255
 #define I2C_MAXWAIT 5000
 
 class SlowSoftI2CMaster {
@@ -40,7 +40,7 @@ class SlowSoftI2CMaster {
   bool i2c_write(uint8_t value);
   uint8_t i2c_read(bool last);
   bool error;
-  
+
  private:
   void setHigh(uint8_t pin);
   void setLow(uint8_t pin);
